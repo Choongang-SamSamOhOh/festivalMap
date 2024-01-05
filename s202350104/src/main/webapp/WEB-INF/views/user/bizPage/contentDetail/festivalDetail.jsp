@@ -325,7 +325,7 @@
 									</c:when>
 									<c:when test="${festival.status == 1}">
 										<div class="col-6 mb-3">
-											<button type="button" class="form-control btn btn-primary w-100" onclick="location.href='festivalUpdateForm?contentId=${festival.content_id}&currentPage=${currentPage}'">수정하기</button>
+											<button type="button" class="form-control btn btn-primary w-100" onclick="location.href='bizPage/contentUpdate/{contentId}?contentId=${festival.content_id}&currentPage=${currentPage}&big_code=${big_code}'">수정하기</button>
 										</div>
 										<div class="col-2 mb-3">
 											<button type="button" class="btn btn-outline-secondary w-100" onclick="">반려전환</button>

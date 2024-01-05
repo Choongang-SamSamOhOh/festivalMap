@@ -56,6 +56,7 @@ public class RecommendationController {
                 		strategies.get("popularContentRecommendation"),
                 		strategies.get("SimilarContentRecommendation")
                 ));
+            	recommendations = recService.recommend(null, content);            	            	
             } else {
                 user = userService.getUserById(userId);
                 if (!user.isPresent()) {
@@ -70,11 +71,7 @@ public class RecommendationController {
                 		strategies.get("ReviewBasedRecommendation")
 //                		strategies.get("popularContentRecommendation")
                 ));
-            }
-            if(userId != 0) {
             	recommendations = recService.recommend(user.get(), content);            	
-            } else {
-            	recommendations = recService.recommend(null, content);            	            	
             }
             
 //          Top 10 추천
